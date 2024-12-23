@@ -30,6 +30,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         Role role = roleRepository.findById(user.getRoleId())
                 .orElseThrow(() -> new RuntimeException("User role not found: " + username));
 
+
         List<Permission> permissions = permissionRepository.findAllById(role.getPermissionsId());
 
         return new CustomUserDetails(user, role, permissions);
