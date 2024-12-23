@@ -25,8 +25,13 @@ public class AttachmentController {
         return ResponseEntity.ok(attachmentService.addAttachment(file));
     }
 
-    @PostMapping("/get-by-id/{id}")
+    @GetMapping("/get-by-id/{id}")
     public ResponseEntity<DataDto<String>> getById(@PathVariable Long id, HttpServletResponse response) {
         return ResponseEntity.ok(attachmentService.getById(id, response));
+    }
+
+    @GetMapping("/by-id/{id}")
+    public ResponseEntity<DataDto<byte[]>> getImageById(@PathVariable Long id) {
+        return attachmentService.getImageById(id);
     }
 }

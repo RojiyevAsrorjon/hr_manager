@@ -6,4 +6,5 @@ import uz.demo.app_hr_manager.entity.product.Category;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
+    boolean existsByCategoryName(String categoryName);
 }
