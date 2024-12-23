@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <include file="/db/changelog/create_permissions-table.xml"/>
+    <include file="/db/changelog/create_roles-table.xml"/>
+    <include file="/db/changelog/create_role_permissions_table.xml"/>
+    <include file="/db/changelog/create_user_table.xml"/>
+    <include file="/db/changelog/insert_into_permission.xml"/>
+    <include file="/db/changelog/insert_into_role_table.xml"/>
+    <include file="/db/changelog/insert_into_role_permission_table.xml"/>
+    <include file="/db/changelog/insert_into_user_table.xml"/>
+    <include file="/db/changelog/create_article_table.xml"/>
+    <include file="/db/changelog/create_category_table.xml"/>
+    <include file="/db/changelog/create_attachment_table.xml"/>
+
+    <include file="/db/changelog/create_brand_table.xml"/>
+    <include file="/db/changelog/create_attachment_content_table.xml"/>
+
+</databaseChangeLog>
